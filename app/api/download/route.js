@@ -1,14 +1,14 @@
 // app/api/download/route.js
 // import { supabase } from '@/lib/supabaseClient';
-import { createClient } from "@/utils/supabase/server"; // 서버에 맞는 클라이언트 가져오기
+import { createClient } from '@/utils/supabase/server'; // 서버에 맞는 클라이언트 가져오기
 
 export async function GET(request) {
   const supabase = createClient();
   const { searchParams } = new URL(request.url);
-  const filePath = searchParams.get("path");
+  const filePath = searchParams.get('path');
 
   const { data, error } = await supabase.storage
-    .from("supaline-bucket")
+    .from('supaline-bucket')
     .download(filePath);
 
   if (error) {
@@ -18,8 +18,8 @@ export async function GET(request) {
   const fileBlob = await data.blob();
   return new Response(fileBlob, {
     headers: {
-      "Content-Type": "application/octet-stream",
-      "Content-Disposition": `attachment; filename="${filePath.split("/").pop()}"`,
+      'Content-Type': 'application/octet-stream',
+      'Content-Disposition': `attachment; filename="${filePath.split('/').pop()}"`,
     },
   });
 }

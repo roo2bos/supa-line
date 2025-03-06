@@ -1,9 +1,9 @@
-"use client";
-import { ReactNode } from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+'use client';
+import { ReactNode } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
-import { CONST } from "@/_lib/constants";
+import { CONST } from '@/_lib/constants';
 
 export default function ErrorPage({
   message = (

@@ -1,15 +1,15 @@
+import classNames from 'classnames';
 import Link from 'next/link';
-import { RiNextjsLine, RiSupabaseLine } from 'react-icons/ri';
+import { RiSupabaseLine } from 'react-icons/ri';
 
 import { CONST } from '@/_lib/constants';
-import classNames from 'classnames';
 
 export default function Footer({ isLnbOpen }: { isLnbOpen: boolean }) {
   return (
     <footer
       className={classNames(
         'p-5 font-bold text-center bg-gray-100',
-        isLnbOpen && 'tablet:hidden'
+        isLnbOpen && 'tablet:hidden',
       )}
     >
       <p className="flex items-center justify-center gap-5">

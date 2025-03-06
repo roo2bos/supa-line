@@ -3,8 +3,6 @@
 import { useState } from 'react';
 import classNames from 'classnames';
 import { MdMinimize } from 'react-icons/md';
-
-// app/youtube/VideoModal.tsx
 import { RiCloseLine } from 'react-icons/ri';
 
 import { Button } from '@/_components';
@@ -60,12 +58,14 @@ export default function PopPlayer() {
           <div
             className={classNames(
               'relative flex flex-col mx-auto w-full tablet:max-w-1280 [@media_(max-height:765px)]:tablet:w-auto [@media_(max-height:765px)]:tablet:max-w-[clamp(0px,calc(100vw-45px),100%)] [@media_(max-height:765px)]:tablet:h-[clamp(0px,calc(100vh-45px),765px)] [@media_(max-height:765px)]:tablet:aspect-video',
-              isMin ? 'w-[clamp(0px,calc(100vw-32px),266px)] tablet:-translate-y-full' : '',
+              isMin
+                ? 'w-[clamp(0px,calc(100vw-32px),266px)] tablet:-translate-y-full'
+                : '',
               // dimded ? 'mx-auto w-[calc(100vw-48px)] max-w-1280' : 'max-w-1280',
               dimded
                 ? 'mx-auto w-full tablet:translate-y-0'
                 : 'tablet:-translate-y-1/2',
-                // : 'tablet:-translate-y-1/2  max-w-1280 aspect-video',
+              // : 'tablet:-translate-y-1/2  max-w-1280 aspect-video',
             )}
           >
             <div className="flex items-end justify-end">

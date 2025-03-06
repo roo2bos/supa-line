@@ -130,7 +130,7 @@ export async function GET(req: NextRequest) {
     //     "Access-Control-Allow-Methods": "GET", // 허용 메서드 추가
     //   },
     // });
-  } catch (error: any) {
+  } catch (error: unknown) {
     // console.error('API 요청 중 오류 발생:', error.message);
     return NextResponse.json(
       { error: 'YouTube API 요청 중 오류 발생' },

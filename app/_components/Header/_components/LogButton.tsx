@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { FaFacebook, FaGithub, FaUserCircle } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { MdEmail } from 'react-icons/md';
-import { TbLogout } from 'react-icons/tb';
 import { TiArrowSortedDown } from 'react-icons/ti';
 import { TiArrowSortedUp } from 'react-icons/ti';
 
@@ -61,7 +60,11 @@ export default function LogButton() {
             className="relative flex flex-col items-center justify-center bg-gray-300 rounded-full cursor-pointer w-44 aspect-square"
             onClick={handleToggle}
           >
-            <Dimmed isShow={isShow} onClick={()=>setIsShow(false)} transparent />
+            <Dimmed
+              isShow={isShow}
+              onClick={() => setIsShow(false)}
+              transparent
+            />
             {user?.userInfo.provider === 'google' && (
               <FcGoogle className="w-20 h-20" />
             )}

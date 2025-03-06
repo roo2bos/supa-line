@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'next/navigation';
 
@@ -12,7 +11,7 @@ import MusicList from '../_components/MusicList';
 export default function SearchMusicList() {
   const params = useSearchParams();
   const query = params.get('q');
-  const { data, isLoading, error, refetch } = useQuery({
+  const { data, isLoading, error } = useQuery({
     queryKey: ['musicList', 'search'],
     queryFn: async () => {
       const { data } = await api.get<YouTubeVideo[]>(
@@ -22,10 +21,10 @@ export default function SearchMusicList() {
     },
     enabled: !!query, // `q`가 있을 때만 실행
   });
-  useEffect(() => {
-    console.log(data);
-    refetch();
-  }, [query]);
+  // useEffect(() => {
+  //   console.log(data);
+  //   refetch();
+  // }, [query]);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error loading search results.</div>;

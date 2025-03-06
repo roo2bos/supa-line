@@ -1,5 +1,4 @@
 'use client';
-import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 
 function Dimmed({
@@ -9,7 +8,7 @@ function Dimmed({
   transparent = false,
 }: {
   isShow: boolean;
-  transparent? : boolean;
+  transparent?: boolean;
   className?: string;
   onClick?: () => void;
 }) {
@@ -19,8 +18,7 @@ function Dimmed({
         'fixed left-0 top-0 z-10 inset-y-0 right-0 opacity-0',
         'pointer-events-none',
         {
-          'opacity-100 pointer-events-auto bg-black/20':
-            isShow,
+          'opacity-100 pointer-events-auto bg-black/20': isShow,
         },
 
         // {'!bg-transparent w-screen h-screen hidden' : isShow && transparent },

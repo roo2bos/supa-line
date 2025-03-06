@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import React from "react";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 type Props = {
   content: string;

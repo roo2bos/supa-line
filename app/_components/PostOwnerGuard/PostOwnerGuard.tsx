@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { useAuth } from '../AuthContext/AuthContext';
 
 interface UserOwnsPostProps {

@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Button from './Button';
 import { RiCloseLine } from 'react-icons/ri';
+
+import Button from './Button';
 
 const meta: Meta<typeof Button> = {
   title: 'component/Button/Button',

@@ -16,8 +16,8 @@ export const iconTypes = {
 };
 export default function Icon({
   name,
-  width=24,
-  height=24,
+  width = 24,
+  height = 24,
   className,
   ...props
 }: IconProps) {
