@@ -3,26 +3,21 @@
 import { redirect } from 'next/navigation';
 
 import { createClient } from '@/utils/supabase/client';
-// import { revalidatePath } from 'next/cache';
 
 export const supabase = createClient();
 
 export async function signInWithGithub() {
   const supabase = createClient();
-  const { /* data, user, */ error } = await supabase.auth.signInWithOAuth({
+  const { error } = await supabase.auth.signInWithOAuth({
     provider: 'github',
     options: {
-      redirectTo: 'http://localhost:3000/auth/callback',
+      redirectTo: '/',
     },
   });
 
   if (error) {
     console.error('Error during sign-in:', error.message);
     redirect('/error');
-  } else {
-    // console.log('Successfully signed in with github:', data);
-    // revalidatePath('/', 'layout')
-    // redirect('/')
   }
 }
 
@@ -31,40 +26,28 @@ export async function signInWithGoogle() {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
     options: {
-      // redirectTo: process.env.NEXT_PUBLIC_SUPABASE_URL,
-      redirectTo: '/auth/callback',
-
-      // redirectTo: '/auth/callback',
+      redirectTo: '/',
     },
   });
 
   if (error) {
     console.error('Error during sign-in:', error.message);
     redirect('/error');
-  } else {
-    // console.log('Successfully signed in with Google:', data);
-    // revalidatePath('/', 'layout')
-    // redirect('http://localhost:3000/auth/callback')
   }
-
 }
 
 export async function signInWithFacebook() {
   const supabase = createClient();
-  const { /* data, */ error } = await supabase.auth.signInWithOAuth({
+  const { error } = await supabase.auth.signInWithOAuth({
     provider: 'facebook',
     options: {
-      redirectTo: '/auth/callback',
+      redirectTo: '/',
     },
   });
 
   if (error) {
     console.error('Error during sign-in:', error.message);
     redirect('/error');
-  } else {
-    // console.log('Successfully signed in with Facebook:', data);
-    // revalidatePath('/', 'layout')
-    // redirect('http://localhost:3000/auth/callback')
   }
 }
 
