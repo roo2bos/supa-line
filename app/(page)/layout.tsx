@@ -1,8 +1,9 @@
 'use client';
+
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import classNames from 'classnames';
 
-import { /* Footer, */ Header, PopPlayer } from '@/_components';
+import { Header, PopPlayer } from '@/_components';
 import { AuthProvider } from '@/_components/AuthContext/AuthContext';
 import Dimmed from '@/_components/Dimmed/Dimmed';
 import Lnb from '@/_components/Lnb/Lnb';
