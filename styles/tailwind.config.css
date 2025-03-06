@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Layout */
+  html,
+  body {
+    @apply w-full h-full;
+  }
+  html {
+    -webkit-tap-highlight-color: transparent;
+    --p: #4f4c47;
+    --s: #545652;
+    --sc: #fc0202;
+    --a: #635a54;
+    --n: #2a2827;
+    --nc: #e50202;
+    --b1: #000000;
+    --b2: #0a0909;
+    --b3: #0f0e0e;
+    --bc: #474544;
+  }
+  body {
+    @apply relative font-sans text-base font-normal leading-normal tracking-tight text-[#304c72] select-none desktop:overflow-x-hidden bg-[#f9fafb];
+  }
+  input {
+    @apply min-w-0 bg-transparent;
+  }
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    @apply appearance-none;
+  }
+}
+
+@layer components {
+  /* Container */
+  .container {
+    @apply relative w-full mx-auto px-sm tablet:px-md desktop:px-lg;
+  }
+  .container-sm {
+    @apply container desktop:max-w-848;
+  }
+  .container-full {
+    @apply container max-w-full;
+  }
+
+  /* Grid List */
+  .grid-list {
+    @apply grid grid-cols-1 gap-y-16 tablet:grid-cols-2 tablet:gap-x-20 tablet:gap-y-80 desktop:grid-cols-3 desktop:gap-x-28 desktop:gap-y-100;
+  }
+
+  /* Skeleton */
+  .skeleton {
+    @apply bg-gray-300 rounded-sm animate-pulse;
+  }
+  .skeleton-dark {
+    @apply !bg-gray-800 skeleton;
+  }
+  .skeleton-title {
+    @apply h-24 skeleton;
+  }
+  .skeleton-text {
+    @apply h-16 skeleton;
+  }
+  .skeleton-dark-text {
+    @apply h-16 skeleton-dark;
+  }
+
+  /* Button */
+  .btn {
+    @apply relative inline-flex items-center align-middle transition-colors border min-w-fit tablet:w-auto bg-gray-300;
+  }
+  .ibtn {
+    @apply relative inline-flex items-center align-middle transition-colors min-w-fit tablet:w-auto;
+  }
+  .btn-outlined {
+    @apply text-gray-800 bg-white btn;
+  }
+  .btn-text {
+    @apply text-gray-800 bg-transparent border-transparent btn hover:underline active:underline;
+  }
+
+  /* Form */
+  .form-text {
+    @apply w-full transition-colors border rounded-sm outline-none pl-sm placeholder:text-gray-500 disabled:bg-gray-200 disabled:text-gray-600 disabled:border-gray-400 disabled:hover:border-gray-400 read-only:bg-gray-200 read-only:text-gray-600 read-only:border-gray-400 read-only:hover:border-gray-400 read-only:focus:border-gray-400;
+  }
+  .form-text-default {
+    @apply border-gray-400 pr-sm hover:border-gray-800 focus:border-gray-800;
+  }
+  .form-text-error {
+    @apply pr-52 border-error hover:border-error focus:border-error;
+  }
+
+}
+
+.modal {
+  @apply fixed inset-0 z-modal;
+}
+.modal-under {
+  @apply fixed left-0 z-modal inset-y-0 right-0;
+}
+/* Swiper */
+.swiper-pagination-fraction {
+  @apply bottom-0 w-auto font-bold text-gray-500 left-sm tablet:left-md desktop:left-0;
+}
+.swiper-pagination-current {
+  @apply text-gray-800;
+}
+
+/* Scrollbar */
+.body-scrollbar::-webkit-scrollbar {
+  /* 배경 */
+  @apply w-12 h-12 bg-white;
+}
+.body-scrollbar::-webkit-scrollbar-thumb {
+  /* 스크롤바 */
+  @apply bg-gray-500 rounded-md border-3 border-solid border-white;
+}
+.body-scrollbar::-webkit-scrollbar-track {
+  /* 배경 위 */
+  @apply bg-white;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  @apply w-6 h-6 mr-17;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-500 rounded-md;
+}
+
+/* DatePicker */
+.rdp-button {
+  @apply hover:!bg-primary hover:!text-white;
+}
+
+/* PopupPlayer */
+.popup-player-wrapper {
+  @apply absolute inset-0 bg-black;
+}
+.popup-player-wrapper > div,
+.popup-player-wrapper > div > div {
+  @apply h-full;
+}
+.popup-player-wrapper .jwplayer.jw-flag-aspect-mode {
+  @apply !h-full;
+}
+.popup-player-wrapper .jw-aspect {
+  @apply !hidden;
+}
+
+/* swagger */
+.swagger-ui .title {
+  @apply pl-30 !text-2xl font-bold flex items-center leading-none;
+}
+.swagger-ui .info .title span {
+  @apply inline-flex items-center !static !text-base !align-baseline leading-none;
+}
+.swagger-ui .info .title small {
+  @apply inline-flex items-center !static !align-baseline !text-xs leading-none !pt-4;
+}
+.swagger-ui .info .title small * {
+  @apply inline-flex items-center !static !align-baseline !text-xs leading-none;
+}
