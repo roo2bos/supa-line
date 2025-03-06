@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
-import { BsPlayCircleFill } from "react-icons/bs";
-import { CgArrowTopRight } from "react-icons/cg";
+import Image from 'next/image';
+import Link from 'next/link';
+import { BsPlayCircleFill } from 'react-icons/bs';
+import { CgArrowTopRight } from 'react-icons/cg';
 
-import { useVideoStore } from "@/stores/useVideoStore";
+import { useVideoStore } from '@/stores/useVideoStore';
 interface ItemProps {
   index: number;
   info: {
@@ -64,12 +64,17 @@ export default function MusicItemCard({
               <CgArrowTopRight />
             </div>
           </div>
-          <strong title={info.title} className="line-clamp-1 group-hover:underline">
+          <strong
+            title={info.title}
+            className="line-clamp-1 group-hover:underline"
+          >
             {info.title}
           </strong>
           {/* <BiWindows className="hidden w-20 h-20 group-hover:block" /> */}
           {info.desc && (
-            <p title={info.desc} className="w-full text-xs line-clamp-2">{info.desc}</p>
+            <p title={info.desc} className="w-full text-xs line-clamp-2">
+              {info.desc}
+            </p>
           )}
         </Link>
       </div>

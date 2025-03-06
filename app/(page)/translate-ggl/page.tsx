@@ -1,9 +1,9 @@
 // components/TranslateForm.tsx
 'use client';
 
-import { Body, Button, PageTitle } from '@/_components';
-import Link from 'next/link';
 import { useState } from 'react';
+
+import { Body, Button, PageTitle } from '@/_components';
 
 const TranslateForm = () => {
   const [text, setText] = useState('');

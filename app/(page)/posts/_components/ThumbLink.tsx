@@ -1,6 +1,6 @@
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import { BiLinkAlt } from 'react-icons/bi';
 
 const ThumbLink = ({ fileUrl }: { fileUrl: string }) => {
@@ -8,7 +8,7 @@ const ThumbLink = ({ fileUrl }: { fileUrl: string }) => {
   const isImage = /\.(jpeg|jpg|gif|png|webp|avif|svg)$/i.test(fileUrl);
   // YouTube 링크인지 체크
   const youtubeMatch = fileUrl.match(
-    /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i,
+    /(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/\s]{11})/i,
   );
   const youtubeThumbnail = youtubeMatch
     ? `https://img.youtube.com/vi/${youtubeMatch[1]}/hqdefault.jpg`
@@ -22,8 +22,8 @@ const ThumbLink = ({ fileUrl }: { fileUrl: string }) => {
         rel="noopener noreferrer"
         className="relative inline-flex items-center h-32 gap-5"
       >
-        
-        <BiLinkAlt /> {isImage ? (
+        <BiLinkAlt />{' '}
+        {isImage ? (
           <Image
             src={fileUrl}
             alt="Uploaded File"

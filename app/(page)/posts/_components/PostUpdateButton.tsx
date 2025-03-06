@@ -55,9 +55,9 @@ export default function PostUpdateButton({
   const onSubmit = async (data: PostUpdateType) => {
     const file = data.add_file?.length ? data.add_file[0] : null;
     // console.log('onSubmit: ', data.add_file?.length, data.add_file, file);
-    
+
     if (file instanceof File) {
-      const uploadResult:ResponseUpload = await uploadFile(file);
+      const uploadResult: ResponseUpload = await uploadFile(file);
       console.log(uploadResult.url);
       mutation.mutate({
         ...data,

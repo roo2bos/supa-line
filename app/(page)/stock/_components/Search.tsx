@@ -1,10 +1,10 @@
 'use client';
 import { useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
-
-import { Body, Button, PageTitle } from '@/_components';
-import Markdown from '@/_components/Markdown/Markdown';
 import { useRouter } from 'next/navigation';
+
+import { Button, PageTitle } from '@/_components';
+import Markdown from '@/_components/Markdown/Markdown';
 
 const fetchGeminiAPI = async (inputText: string) => {
   const res = await fetch('/api/ggl-ai', {
@@ -76,16 +76,16 @@ export default function Search() {
           className="w-full py-5 bg-white border rounded px-sm"
           placeholder="종목 입력"
         />
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            className="px-4 py-2 mt-2 bg-green-500 rounded"
-            disabled={geminiMutation.isPending}
-            onClick={() => geminiMutation.mutate(inputText)}
-          >
-            {geminiMutation.isPending ? '검색 중...' : '검색'}
-          </Button>
+        <Button
+          type="submit"
+          variant="contained"
+          color="primary"
+          className="px-4 py-2 mt-2 bg-green-500 rounded"
+          disabled={geminiMutation.isPending}
+          onClick={() => geminiMutation.mutate(inputText)}
+        >
+          {geminiMutation.isPending ? '검색 중...' : '검색'}
+        </Button>
       </form>
     </div>
   );

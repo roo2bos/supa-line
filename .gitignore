@@ -40,5 +40,6 @@ next-env.d.ts
 * copy*.ts
 *copy.tsx
 *copy.ts
+*copy.json
 
 .vscode

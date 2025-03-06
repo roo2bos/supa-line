@@ -1,7 +1,10 @@
 'use client';
-import MusicList from '../_components/MusicList';
+
 import { useQuery } from '@tanstack/react-query';
+
 import { getMusicFav } from '@/_services/music.service';
+
+import MusicList from '../_components/MusicList';
 
 export default function FavPage() {
   const { data, isLoading, error } = useQuery({

@@ -1,9 +1,9 @@
-"use client";
-import { ReactNode } from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+'use client';
+import { ReactNode } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
-import { CONST } from "@/_lib/constants";
+import { CONST } from '@/_lib/constants';
 
 export default function ErrorPage({
   message = (
@@ -18,7 +18,7 @@ export default function ErrorPage({
 }) {
   const router = useRouter();
   return (
-    <div className="h-full flex flex-col text-center justify-center items-center">
+    <div className="flex flex-col items-center justify-center h-full text-center">
       <>
         <h1 className="font-bold mb-50">{CONST.TITLE.SITE_TITLE}</h1>
         {message}

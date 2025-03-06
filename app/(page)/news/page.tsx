@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 export default function NewsPage() {
   const [articles, setArticles] = useState<{ title: string }[]>([]);
@@ -8,7 +8,7 @@ export default function NewsPage() {
   // 컴포넌트 마운트 시 API 호출
   useEffect(() => {
     const fetchArticles = async () => {
-      const res = await fetch("/api/scrape");
+      const res = await fetch('/api/scrape');
       const data = await res.json();
       setArticles(data);
     };
@@ -18,8 +18,8 @@ export default function NewsPage() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Scraped News Articles</h1>
-      <ul className="list-disc pl-5">
+      <h1 className="mb-4 text-2xl font-bold">Scraped News Articles</h1>
+      <ul className="pl-5 list-disc">
         {articles.map((article, index) => (
           <li key={index} className="mb-2">
             {article.title}

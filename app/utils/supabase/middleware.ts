@@ -1,5 +1,5 @@
-import { createServerClient } from "@supabase/ssr";
-import { NextResponse, type NextRequest } from "next/server";
+import { createServerClient } from '@supabase/ssr';
+import { NextResponse, type NextRequest } from 'next/server';
 
 export async function updateSession(request: NextRequest) {
   let supabaseResponse = NextResponse.next({
@@ -54,9 +54,9 @@ export async function updateSession(request: NextRequest) {
   // 로그인되지 않은 상태에서 로그인 페이지가 아닌 경우 리디렉션
   const url = request.nextUrl.clone();
 
-  if (user && url.pathname === "/login") {
+  if (user && url.pathname === '/login') {
     // If the user is logged in and trying to access the login page, redirect to home or another page
-    url.pathname = "/";
+    url.pathname = '/';
     return NextResponse.redirect(url);
   }
   //수정 끝: 로그인만 로그인 페이지로 이동

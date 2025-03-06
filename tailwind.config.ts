@@ -3,7 +3,7 @@ import forms from '@tailwindcss/forms';
 import type { Config } from 'tailwindcss';
 
 export const px0_2000 = Object.fromEntries(
-  Array.from({ length: 2001 }, (_, i) => [`${i}`, `${i}px`])
+  Array.from({ length: 2001 }, (_, i) => [`${i}`, `${i}px`]),
 );
 
 const config: Config = {

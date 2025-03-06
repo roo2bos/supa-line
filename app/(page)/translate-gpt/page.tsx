@@ -4,21 +4,6 @@ import React, { useState } from 'react';
 
 import { Body, PageTitle } from '@/_components';
 
-// async function callTranslateAPI(input: any) {
-//   const response = await fetch('/api/translate', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(input),
-//   });
-//   const data = await response.json();
-//   if (data.success) {
-//     return data.data;
-//   }
-//   throw new Error(data.error || 'Translation failed');
-// }
-
 const TranslateGPT = () => {
   const [inputText, setInputText] = useState('hello');
   const [translatedText, setTranslatedText] = useState('');

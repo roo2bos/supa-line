@@ -1,5 +1,5 @@
-import { useMutation /* , UseMutationResult */ } from "@tanstack/react-query";
-import axios from "axios";
+import { useMutation /* , UseMutationResult */ } from '@tanstack/react-query';
+import axios from 'axios';
 
 interface Post {
   title: string;
@@ -8,7 +8,7 @@ interface Post {
 }
 
 const addPost = async (post: Post) => {
-  const response = await axios.post<Post>("/api/post", post);
+  const response = await axios.post<Post>('/api/post', post);
   return response.data;
 };
 
@@ -20,7 +20,7 @@ export const useAddPost = () => {
       // 성공 시 동작
     },
     onError: (error: Error) => {
-      console.error("Error saving post:", error);
+      console.error('Error saving post:', error);
     },
   });
 };

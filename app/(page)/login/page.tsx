@@ -1,25 +1,25 @@
-"use client";
+'use client';
 
-import { FaFacebook, FaGithub } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
+import { FaFacebook, FaGithub } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
 
-import { Body, Button } from "@/_components";
+import { Body, Button } from '@/_components';
 
 import {
   login,
   /* signInWithGithub, signInWithGoogle,  */ signup,
-} from "./actions";
+} from './actions';
 import {
   signInWithFacebook,
   signInWithGithub,
   signInWithGoogle,
-} from "./oauth";
+} from './oauth';
 
 export default function LoginPage() {
   const cssInput =
-    "mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50";
+    'mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50';
   const cssButton =
-    "flex w-full justify-center rounded-md bg-indigo-600 border border-gray-300  px-3 py-1.5 text-sm font-semibold leading-6 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600";
+    'flex w-full justify-center rounded-md bg-indigo-600 border border-gray-300  px-3 py-1.5 text-sm font-semibold leading-6 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600';
 
   return (
     <>
@@ -51,7 +51,7 @@ export default function LoginPage() {
           </button>
         </form>
 
-        <p className="mt-20 flex justify-center gap-10">
+        <p className="flex justify-center gap-10 mt-20">
           <Button onClick={signInWithGithub}>
             <FaGithub className="w-full h-full aspect-square" />
           </Button>

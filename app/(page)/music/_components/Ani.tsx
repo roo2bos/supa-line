@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 export default function Ani() {
   return (
@@ -10,7 +10,7 @@ export default function Ani() {
         loop
         autoplay
         speed={0.5}
-        style={{ width: "200px", height: "200px" }} // 원하는 크기로 조절
+        style={{ width: '200px', height: '200px' }} // 원하는 크기로 조절
       />
     </>
   );

@@ -7,9 +7,10 @@ import {
 } from 'next/font/google';
 import localFont from 'next/font/local';
 
-import type { Metadata } from 'next';
 import '../styles/globals.css';
 import { CONST } from './_lib/constants';
+
+import type { Metadata } from 'next';
 
 const jomhuria = Jomhuria({
   subsets: ['latin'],

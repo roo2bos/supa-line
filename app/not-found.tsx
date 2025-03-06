@@ -1,7 +1,8 @@
-import { Metadata } from "next";
+import { Metadata } from 'next';
 
-import { SITE_TITLE } from "@/_lib/constants/title.constant";
-import ErrorPage from "./_components/Error/Error";
+import { SITE_TITLE } from '@/_lib/constants/title.constant';
+
+import ErrorPage from './_components/Error/Error';
 
 // import ErrorPage from "./error/page";
 
