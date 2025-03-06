@@ -32,7 +32,7 @@ export async function signInWithGoogle() {
     provider: 'google',
     options: {
       // redirectTo: process.env.NEXT_PUBLIC_SUPABASE_URL,
-      redirectTo: 'http://localhost:3000/auth/callback',
+      redirectTo: '/auth/callback',
 
       // redirectTo: '/auth/callback',
     },
@@ -54,7 +54,7 @@ export async function signInWithFacebook() {
   const { /* data, */ error } = await supabase.auth.signInWithOAuth({
     provider: 'facebook',
     options: {
-      redirectTo: 'http://localhost:3000/auth/callback',
+      redirectTo: '/auth/callback',
     },
   });
 
